@@ -74,3 +74,37 @@ int main(){
 	return 0;
 	
 }
+///////////////////////////////////////////////////////////////////////////////////////////////
+//Esto fue lo que yo hice en clase pues entendí que esto era lo que pedía el ejercicio:
+#include <iostream>
+using namespace std;
+
+
+template <class Greater>
+Greater compareGreater(Greater a, Greater b) {
+	return a > b ||a<b;
+}
+template <class Lesser>
+Lesser compareLesser(Lesser a, Lesser b) {
+	return a < b || a > b;
+}
+
+int main()
+{
+	double a, b;
+	cout << "Enter two numbers: ";
+	cin >> a >> b;
+	cout << "The Greater Number is:" << compareGreater(a, b) << endl;
+	cout << "The Lesser Number is: " << compareLesser(a, b) << endl;
+
+}
+//Esto fue lo que me salio como resultado:
+/*
+Enter two numbers: 1
+2
+The Greater Number is:1
+The Lesser Number is: 1
+
+C:\Users\Alejandro Carrera\source\repos\EjerciciosTresTemplates\Debug\EjerciciosTresTemplates.exe (process 12172) exited with code 0.
+Press any key to close this window . . .
+*/
